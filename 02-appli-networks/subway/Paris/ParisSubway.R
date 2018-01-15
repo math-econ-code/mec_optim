@@ -14,24 +14,14 @@
 library('gurobi')
 library('Matrix')
 
-# for Paris:
-city = 'Paris'
 originNode <- 84 #saint-germain des pres
 destinationNode<- 116 #trocadero
 themargin=-c(1.1,.6,.6,1.1)
 
-# for NYC
-# city = 'NYC'
-# originNode <- 84 #saint-germain des pres
-# destinationNode<- 116 #trocadero
-# originNode = 446 # Union Sq.
-# destinationNode = 465 # 59th St in Brooklyn
-# themargin=-c(1,1,.5,0.2)
-
 
 thePath = getwd()
-arcs = as.matrix(read.csv(paste0(thePath,"/", city, "/arcs.csv"),sep=";", header=FALSE)) # loads the data
-nodes = as.matrix(read.csv(paste0(thePath,"/", city,"/nodes.csv"),sep=";", header=FALSE)) # loads the data
+arcs = as.matrix(read.csv(paste0(thePath, "/arcs.csv"),sep=";", header=FALSE)) # loads the data
+nodes = as.matrix(read.csv(paste0(thePath,"/nodes.csv"),sep=";", header=FALSE)) # loads the data
 nbNodes = max(arcs[,1])
 nbArcs = dim(arcs)[1]
 
