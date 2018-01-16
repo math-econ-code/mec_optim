@@ -15,7 +15,7 @@ plot.igraph(network,vertex.label=labelNodes, vertex.label.cex=1,vertex.size=size
 }
 
 thePath = getwd()
-arcs = as.matrix(read.csv(paste0(thePath,"/arcs_no_connecting_time.csv"),sep=",", header=TRUE)) # loads the data
+arcs = as.matrix(read.csv(paste0(thePath,"/arcs.csv"),sep=",", header=TRUE)) # loads the data
 nodes = as.matrix(read.csv(paste0(thePath,"/nodes.csv"),sep=",", header=TRUE)) # loads the data
 
 class(arcs) <- "numeric"
