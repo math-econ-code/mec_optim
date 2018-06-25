@@ -173,7 +173,7 @@ if (doIPFP2)
   {
     #print(iter)
     iter = iter+1
-    vstar = apply(Phi - v, 1, max)
+    vstar = apply(Phi - matrix(v,nbX,nbY,byrow=T), 1, max)
     
     u=mu + vstar + sigma * log( apply(exp( (Phi - matrix(v,nbX,nbY,byrow=T) - vstar)/sigma) ,1, sum) )
     error = max(abs(u-uprec))
