@@ -14,7 +14,7 @@
 cdf_P = punif
 quantile_P = qunif
 
-cdf_P = pnorm
+cdf_Q = pnorm
 quantile_Q = qnorm
 
 Phi = function(x,y) (x*y)

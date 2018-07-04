@@ -26,8 +26,7 @@ costs = dists[nonzeros]
 arcs = cbind(rows,cols+nsources,costs)
 
 n = c(-p,q)
-nameNodes = c(data[2:(nsources+1)] ,dimnames(data)[[2]][2:11])
-
+nameNodes = c(data[1:nsources] ,dimnames(data)[[2]][2:11])
 
 # construct node-incidence matrix:
 Nabla =  sparseMatrix(i=1:nbArcs,j=arcs[,1],dims=c(nbArcs,nbNodes),x=-1) + sparseMatrix(i=1:nbArcs,j=arcs[,2],dims=c(nbArcs,nbNodes),x=1)

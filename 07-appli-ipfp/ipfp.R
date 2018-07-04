@@ -47,6 +47,8 @@ if (syntheticData)
   nbX = length(p)
   nbY = length(q)
 }
+nrow = min(8,nbX)
+ncol = min(8,nbY)
 
 if (doGurobi)
 {
@@ -61,8 +63,6 @@ result   = gurobi ( list(A=A,obj=c(Phi),modelsense="max",rhs=d,sense="="), param
 time <- proc.time()-ptm
 print(paste0('Time elapsed (Gurobi) =', time[1], 's.')) 
 
-nrow = min(8,nbX)
-ncol = min(8,nbY)
 
 if (result$status=="OPTIMAL") {
   pi = matrix(result$x,nrow=nbX)
