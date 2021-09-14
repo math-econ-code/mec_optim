@@ -1,1 +1,0 @@
-This example was prepared by Lucas Vernet using r http://www1.nyc.gov/site/planning/data-maps/open-data/dwn-lion.page. 
