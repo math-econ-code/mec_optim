@@ -89,21 +89,21 @@ plotCurrentNetwork(newyork,destinationNode, nbNodes)
 
 #
 
-library(SPR)
+#library(SPR)
 
 # run solver
 
-sol <- dijkstra(nbNodes,originNode,arcs,destinationNode)
-sp <- sol$path_list
+#sol <- dijkstra(nbNodes,originNode,arcs,destinationNode)
+#sp <- sol$path_list
 
 # print
 
-for (kk in 1) {
-  cat("Minimum distance from ", namesNodes[originNode], " to ", namesNodes[destinationNode],":\n",sep="")
-  cat(sol$min_dist,"\n\n")
+#for (kk in 1) {
+#  cat("Minimum distance from ", namesNodes[originNode], " to ", namesNodes[destinationNode],":\n",sep="")
+#  cat(sol$min_dist,"\n\n")
   
-  cat("Path:\n",sep="")
-  for (i in 1:length(sp)) {
-    cat(i-1,": ", namesNodes[sp[i]]," (#",sp[i],")\n",sep="")
-  }
-}
+#  cat("Path:\n",sep="")
+#  for (i in 1:length(sp)) {
+#    cat(i-1,": ", namesNodes[sp[i]]," (#",sp[i],")\n",sep="")
+#  }
+#}

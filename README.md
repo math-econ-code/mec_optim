@@ -1,5 +1,8 @@
-# mec_optim_2019-06
-‘math+econ+code in Paris’ masterclass on optimal transport, choice and matching models at NYU Paris, Jun 17-21, 2019.
+# mec_optim_2020-01
+‘math+econ+code’ masterclass on optimal transport and economic applications, NYU, Jan 20-24, 2020.
+
+# Google form link
+https://goo.gl/forms/5WLfkpc3GNCecd6A3
 
 # Getting set up
 
@@ -15,7 +18,7 @@ I will provide installation instructions for Windows and Mac users. If you are u
    1. Windows users should also install [Rtools](https://cran.r-project.org/bin/windows/Rtools/).
    2. Mac user should install Xcode and gfortran, the latter of which can be found [here](https://cran.r-project.org/bin/macosx/tools/).
 
-## Anaconda
+## Anaconda (including Python)
 
 1. Follow the installation instructions on the [Anaconda website](https://docs.anaconda.com/anaconda/install/), and download the Python 3.7 version.
 
@@ -30,7 +33,7 @@ I will provide installation instructions for Windows and Mac users. If you are u
    If `R` is in your path, otherwise navigate there. Default for Windows is 
 
    ```
-   cd "C:\Program Files\R\R-3.6.0\bin"
+   cd "C:\Program Files\R\R-3.6.2\bin"
    ```
 
 4. Install the R kernel 
@@ -46,7 +49,6 @@ I will provide installation instructions for Windows and Mac users. If you are u
    ```
 
    in conda and open an `R` notebook.
-
 
 ## Gurobi
 
@@ -74,7 +76,7 @@ We will need a license to use Gurobi, (which is usually expensive), but there is
 
 1. Install git
    * **Mac users:** open terminal and run ```git --version```. If you don't have git installed, you will be prompted to do so.
-   * **Windows users:** go to the [Git for Windows](https://gitforwindows.org/) download page and install. I recommend also installing [Visual Studio Code](https://code.visualstudio.com/	) for a text editor, unless you already use SublimeText or vim. Alternatively [GitHub Desktop](https://desktop.github.com/) is a nice GUI for Git.
+   * **Windows users:** go to the [Git for Windows](https://gitforwindows.org/) download page and install. I recommend also installing [Visual Studio Code](https://code.visualstudio.com/) for a text editor, unless you already use SublimeText or vim. Alternatively [GitHub Desktop](https://desktop.github.com/) is a nice GUI for Git.
 
 2. Open git
 
@@ -85,7 +87,7 @@ We will need a license to use Gurobi, (which is usually expensive), but there is
 
 4. Clone the mec_optim repo
    ```
-     git clone https://github.com/math-econ-code/mec_optim_2019-06
+     git clone https://github.com/math-econ-code/mec_optim_2020-01
    ```
 5. Whenever the repository is updated 
 
@@ -94,6 +96,21 @@ We will need a license to use Gurobi, (which is usually expensive), but there is
    ```
    This is only scratching the surface of what we can do with Git and GitHub. It is an amazing way to version control and collaborate on your code. There are lots of great tutorials on how to use both Git and GitHub and I strongly recommend you get into the habit of using it.
 
-## Gurobi and R playing nicely
+## Gurobi and R 
 
-Once you have cloned the mec_optim repo, open ```gurobi_finalsetup.R``` in Rstudio and run the code.
+Once you have cloned the mec_optim repo, open `gurobi_finalsetup.R` (in the `setup_mec_optim` folder) in Rstudio and run the code.
+
+## Gurobi and Python
+
+Open `Anaconda Prompt` or `terminal` and navigate to the directory where gurobi installed. On windows, this is 
+```
+  cd  C:\gurobi900\win64
+```
+For Mac
+```
+cd /Library/gurobi900/mac64
+```
+Then type
+```
+  python setup.py install
+```

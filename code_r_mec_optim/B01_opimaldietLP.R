@@ -1,9 +1,10 @@
 ################################################# (c) by Alfred Galichon ##########
 
 rm(list=ls())
-
+library(Matrix)
 library(gurobi)
 library(tictoc)
+library(Rmosek)
 library(Rglpk)
 
 # setting up the data
@@ -42,7 +43,6 @@ names(foods_stigler) = names[toKeepStigler]
 print(foods_stigler)
 print(paste0("Total cost (Stigler)= ", sum(foods_stigler * c[toKeepStigler])))
 print("**************************")
-
 
 # alternatively, use glpk
 print("*** Optimal solution using Rglpk ***")

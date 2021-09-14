@@ -32,7 +32,9 @@ q <- rep(1/nCells,nCells)
 demand <- rep(0,nCells)
 
 pwd <- power_diagram(y1,y2,vtilde,rect=c(0,1,0,1))
+
 plot(pwd,weights=FALSE)
+
 
 t <- 1
 cont <- TRUE
