@@ -1,1 +1,0 @@
-Paris subway network data: the network data are available on www.ratp.fr/opendata. Lucas Vernet contributed with the preparation of the data in their current format.

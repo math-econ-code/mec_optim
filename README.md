@@ -1,10 +1,7 @@
-# mec_optim_2021-01
-‘math+econ+code’ masterclass on optimal transport and economic applications, NYU, Jan 18-22, 20201.
+# mec_optim, Jan'22
+‘math+econ+code’ masterclass on optimal transport and economic applications, NYU, January 2022.
 
-© 2018-2021 by Alfred Galichon. Past and present support from NSF grant DMS-1716489, ERC grant CoG-866274, and contributions by Jules Baudet, Pauline Corblet, Gregory Dannay, and James Nesbit are acknowledged.
-
-# Google form link
-https://forms.gle/uC6U1h619ecdZFzV8
+© 2018-2021 by Alfred Galichon. Past and present support from NSF grant DMS-1716489, ERC grant CoG-866274, and contributions by Jules Baudet, Pauline Corblet, Gregory Dannay, Giovanni Montanari, and James Nesbit are acknowledged.
 
 # Getting set up
 

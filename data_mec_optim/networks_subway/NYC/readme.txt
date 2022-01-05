@@ -1,1 +1,0 @@
-NYC subway network data: the network data are available on http://www.mta.info.Pauline Corblet contributed with the preparation of the data in their current format.
