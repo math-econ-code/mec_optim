@@ -37,18 +37,15 @@ class OTProblem:
         return μopt_a.reshape((self.nbx,-1)),uopt_x,vopt_y
 
 
-    def solve_full_lp(self,OutputFlag=True):
+    def solve_partial_lp(self, OutputFlag = True):
         m=grb.Model()
         μ_a = m.addMVar(self.nba)
         m.setObjective(self.Φ_a @ μ_a, grb.GRB.MAXIMIZE)
-        m.addConstr(self.M_z_a() @ μ_a == self.q_z())
+        m.addConstr(self.M_z_a() @ μ_a <= self.q_z())
         m.setParam( 'OutputFlag', OutputFlag )
         m.optimize()
         if m.status == grb.GRB.Status.OPTIMAL:
             μopt_a = np.array(m.getAttr('x')).reshape(self.nbx,self.nby)
-            popt_z = m.getAttr('pi')
+            popt_z = np.array(m.getAttr('pi'))
             uopt_x, vopt_y = popt_z[:self.nbx],popt_z[self.nbx:]
-        else:
-            raise ValueError('Optimization failed.')
-            
         return (μopt_a.reshape((self.nbx,-1)),uopt_x,vopt_y)
